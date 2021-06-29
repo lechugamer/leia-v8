@@ -1,0 +1,13 @@
+.container-users {
+    position: relative;
+    text-align: center;
+    grid-area: main;
+    background-color: var(--pages);
+}
+
+.margin-entries {
+    margin: 30px;
+    padding: 10px;
+    border: 3px solid var(--sidebarIcons);
+    border-radius: 50px;
+}

@@ -1,0 +1,12 @@
+.container-home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pages);
+  grid-area: main;
+}
+
+.container-home h1 {
+    color: var(--fontPages);
+}

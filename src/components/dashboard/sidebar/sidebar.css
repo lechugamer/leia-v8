@@ -1,0 +1,123 @@
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--sidebar);
+  padding: 10px;
+  width: 220px;
+  transition: all .2s ease-in-out;
+  border-top: 2px solid rgb(133, 133, 133);
+}
+
+.arrow__close {
+  display: flex;
+  justify-content:flex-end;
+  margin: 5px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.arrow__close i {
+  transform: rotate(0deg);
+  transition: all .3s ease-in;
+}
+
+.sidebar__link h3 {
+  margin-left: 10px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.sidebar__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px 0px;
+  color: var(--fontMenu);
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.sidebar__link:hover {
+  background: var(--sidebarIcons);
+  color: var(--fontMenu);
+  transition-delay: 0.5s;
+}
+
+.sidebar__link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--sidebarIcons);
+  border-left: 2px solid var(--sidebarIcons);
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.sidebar__link:hover:before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.3s;
+}
+
+.sidebar__link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid var(--sidebarIcons);
+  border-right: 2px solid var(--sidebarIcons);
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.sidebar__link:hover:after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.3s;
+}
+
+.sidebar.inactive{
+  width: 90px;
+  display: flex;
+  align-items: center;
+  transition: all .2s ease-in;
+}
+
+.sidebar.inactive .menu__icons {
+  position: relative;
+  margin: 5px;
+  display: flex;
+}
+
+.sidebar.inactive h3 {
+  transition-delay: .3s;
+  display: none;
+}
+
+.sidebar.inactive .arrow__close i{
+  transform: rotate(180deg);
+  transition: all .3s ease-in;
+}
+
+.dashboard.sideInactive {
+  grid-template-columns: .1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 978px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar__title > i {
+    display: inline;
+  }
+}
